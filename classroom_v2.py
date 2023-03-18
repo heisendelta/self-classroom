@@ -86,8 +86,8 @@ class Assignment:
 if __name__ == '__main__':
     creds = v1.authenticate()
 
-    tdy = datetime.today()
-    daily = Assignment('504713357003', f'{tdy.month}/{tdy.day}', tdy + timedelta(1))
+    tdy = datetime.today() + 1
+    daily = Assignment('504713357003', f'{tdy.month}/{tdy.day}', tdy)
 
     daily.set_daily()
     daily.post(creds)
