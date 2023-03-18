@@ -2,7 +2,7 @@ name: self-classroom
 
 on:
   schedule:
-    - cron: '54 12 * * *'
+    - cron: '0 22 * * *'
 
 jobs:
   build:
