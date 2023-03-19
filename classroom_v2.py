@@ -42,7 +42,7 @@ class Assignment:
         
         todays = {}
         for item in daily: todays[item] = random.choice([25, 30, 40])
-        for item in random.sample(choices, k = 5): todays[item] = random.choice([25, 30, 40])
+        for item in random.sample(choices, k = 4): todays[item] = random.choice([25, 30, 40])
 
         descr = 'Dailies:\n'
         count = 0
@@ -50,7 +50,7 @@ class Assignment:
             descr += f'[{str(value)} mins] {key}\n'
 
             count += 1
-            if count == 4: descr += '\nChoose 4 out of the 5:\n'
+            if count == 4: descr += '\nChoose 3 out of the 4:\n'
         
         total = sum(todays.values())
         descr += f'\nTotal: {str(total - 40)} - {str(total - 25)} mins '
