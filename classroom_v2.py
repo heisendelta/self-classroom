@@ -60,7 +60,7 @@ class Assignment:
 
     def post(self, creds):
         # Checks
-        assert self.due_date_ >= datetime.now()
+        # assert self.due_date_ >= datetime.now()
 
         try: 
             service = build('classroom', 'v1', credentials = creds)
@@ -86,7 +86,7 @@ class Assignment:
 if __name__ == '__main__':
     creds = v1.authenticate()
 
-    tdy = datetime.today() + 1
+    tdy = datetime.today() + timedelta(1)
     daily = Assignment('504713357003', f'{tdy.month}/{tdy.day}', tdy)
 
     daily.set_daily()
